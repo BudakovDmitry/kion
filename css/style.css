@@ -354,6 +354,7 @@ a {
 	align-items: center;
 	box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
 	background: #fbfbfb;
+	color: #000000;
   cursor: pointer;
   text-align: left;
   outline: none;
@@ -368,7 +369,7 @@ a {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   background-color: #e5f9ff;
-	/* color: #FFFFFF; */
+	color: #000000;
 }
 
 /* Style the accordion panel. Note: hidden by default */
