@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <header class="header">
+            <header class="header lock-padding">
                 <div class="header__container">
                     <a
                         class="header__logo"
@@ -50,7 +50,7 @@
                         МАТЕРІАЛИ<br />
                         БРЕНДУ “AKZO NOBEL”
                     </h1>
-                    <button class="button main-title-button">Замовити</button>
+                    <button class="button main-title-button popup-link">Замовити</button>
                 </div>
                 <div class="main-about">
                     <h2 class="title about-title">МИ - КОМПАНІЯ “КІОН”</h2>
@@ -223,7 +223,7 @@
                             <p>Доставка</p>
                         </div>
                     </div>
-                    <button class="button main-steps-button">Замовити</button>
+                    <button class="button main-steps-button popup-link">Замовити</button>
                 </div>
                 <div class="main-questions">
                     <h2 class="title main-questions-title">
@@ -450,6 +450,32 @@
                     </div>
                 </div>
             </footer>
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close">X</a>
+                    <div class="popup__form">
+                        <form class="popup__form" id="popup-form" action="#">
+                            <input
+                                class="popup__form-input _req"
+                                type="text"
+                                name="name"
+                                placeholder="Ім'я"
+                            />
+                            <input
+                                class="popup__form-input _req"
+                                name="phone"
+                                type="tel"
+                                placeholder="Номер телефону"
+                            />
+                            <button type="submit" class="button popup-button">
+                                Відправити
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="js/script.js"></script>
     </body>
