@@ -16,8 +16,6 @@ new Swiper(".swiper", {
         prevEl: ".swiper-button-prev",
     },
 
-    autoHeight: true,
-
     // And if we need scrollbar
     // scrollbar: {
     //     el: ".swiper-scrollbar",
