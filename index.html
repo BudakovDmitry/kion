@@ -11,6 +11,10 @@
             rel="stylesheet"
         />
         <link rel="shortcut icon" href="images/Favicon.png" type="image/png" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="css/style.css" />
         <title>
             КИОН - Інноваційні та екологічні матеріали бренду “AKZO NOBEL”
@@ -343,7 +347,35 @@
                     <h2 class="title main-reviews-title">
                         НАШІ ЗАДОВОЛЕНІ КЛІЄНТИ
                     </h2>
-                    <div class="reviews-container">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image">
+                                <img src="images/1.jpeg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image">
+                                <img src="images/2.jpeg" alt="">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="swiper-slide__image">
+                                <img src="images/3.jpeg" alt="">
+                            </div>
+                          </div>
+                          ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      </div>
+                    <!-- <div class="reviews-container">
                         <div class="arrow-left">
                             <img src="images/left.png" alt="Вліво" />
                         </div>
@@ -353,7 +385,7 @@
                         <div class="arrow-right">
                             <img src="images/right.png" alt="Вправо" />
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </main>
             <footer class="footer">
@@ -477,6 +509,8 @@
                 </div>
             </div>
         </div>
+        
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -420,6 +420,7 @@ body.lock {
 	width: 100%;
 	height: 100%;
 	padding: 40px 0;
+	min-width: 0;
 }
 
 .reviews-container {
@@ -636,6 +637,22 @@ input._error {
 .popup__form-input:nth-child(2) {
 	margin-bottom: 30px;
 }
+
+/* Swiper */
+
+.swiper {
+  width: 900px;
+  height: 450px;
+}
+
+.swiper-slide__image {
+	text-align: center;
+}
+
+.swiper-slide img {
+	max-width: 100%;
+}
+
 
 @media screen and (max-width: 992px) {
 	.header__logo img {
