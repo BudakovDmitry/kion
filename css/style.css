@@ -402,15 +402,15 @@ body.lock {
 }
 
 .accordion:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: #0066FF;
-  float: right;
-  margin-left: 5px;
+  content: url('../images/plus1.svg');
+	width: 30px;
+	height: 30px;
 }
 
 .active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
+  content: url('../images/minus.svg');
+	width: 25px;
+	height: 25px;
 }
 
 /* Reviews */
