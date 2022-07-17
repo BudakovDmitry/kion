@@ -338,12 +338,15 @@ body.lock {
 .main-questions {
 	width: 100%;
 	height: 100%;
+	padding: 50px 0 160px 0;
 	margin-bottom: 30px;
+	background: url('../images/Backgrond-3.png') 0 0/100% auto no-repeat;
 }
 
 .main-questions-title {
 	margin-bottom: 100px;
 }
+
 
 /* Accordion */
 
@@ -424,6 +427,7 @@ body.lock {
 .main-reviews {
 	width: 100%;
 	height: 100%;
+	margin-top: -50px;
 	padding: 40px 0;
 	min-width: 0;
 }
@@ -768,6 +772,10 @@ input._error {
 	line-height: 1.2;
 }
 
+.main-questions {
+	padding: 50px 0 60px 0;
+}
+
 .accordion {
 	margin: 0 auto;
 	width: 650px;
@@ -964,6 +972,10 @@ input._error {
 	text-align: center;
 	font-size: 16px;
 	line-height: 1.2;
+}
+
+.main-questions {
+	padding: 50px 0 50px 0;
 }
 
 .accordion {
@@ -1171,6 +1183,10 @@ input._error {
 	text-align: center;
 	font-size: 16px;
 	line-height: 1.2;
+}
+
+.main-questions {
+	padding: 50px 0 50px 0;
 }
 
 .accordion {
@@ -1387,6 +1403,10 @@ input._error {
 	font-size: 16px;
 	line-height: 1.2;
 } */
+
+.main-questions {
+	padding: 0 0 100px 0;
+}
 
 .accordion {
 	margin: 0 auto;
@@ -1782,9 +1802,6 @@ input._error {
 	max-width: 70%;
 }
 
-.main-products .swiper {
-	display: block;
-}
 
 .main-products .swiper {
 	display: block;
