@@ -14,7 +14,6 @@ new Swiper(".swiper", {
     },
 });
 
-
 let acc = document.getElementsByClassName("accordion");
 
 for (let i = 0; i < acc.length; i++) {
@@ -32,62 +31,88 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 const form = document.getElementById("form");
+const formData = new FormData(form);
+
+// const form = document.getElementById("form");
 form.addEventListener("submit", formSend);
 
-async function formSend(e) {
+function formSend(e) {
     e.preventDefault();
+    let xhr = new XMLHttpRequest();
 
-    let error = formValidate(form);
-
-    let formData = new FormData(form);
-
-    if (error === 0) {
-        form.classList.add("_sending");
-        let response = await fetch("../sendmail.php", {
-            method: "POST",
-            body: formData,
-        });
-
-        if (response.ok) {
-            let result = await response.json();
-            alert(result.message);
-            form.reset();
-            form.classList.remove("_sending");
-        } else {
-            form.classList.remove("_sending");
-            alert(result.message);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                console.log("Send");
+            }
         }
-    } else {
-        alert("Заповніть обов'язкові поля");
-    }
+    };
+
+    xhr.open("POST", "mail.php", true);
+    xhr.send(formData);
+
+    form.reset();
 }
 
-function formValidate(form) {
-    let error = 0;
+// async function formSend(e) {
+//     e.preventDefault();
 
-    let formReq = document.querySelectorAll("._req");
+//     let error = formValidate(form);
 
-    for (let index = 0; index < formReq.length; index++) {
-        const input = formReq[index];
-        formRemoveError(input);
+// const formData = new FormData(form);
 
-        if (input.value === "") {
-            formAddError(input);
-            error++;
-        }
-    }
-    return error;
-}
+// const response = await fetch('mail.php', {
+//     method: "POST",
+//     body: formData,
+// })
 
-function formAddError(input) {
-    input.parentElement.classList.add("_error");
-    input.classList.add("_error");
-}
+//     if (error === 0) {
+//         form.classList.add("_sending");
+//         let response = await fetch("../sendmail.php", {
+//             method: "POST",
+//             body: formData,
+//         });
 
-function formRemoveError(input) {
-    input.parentElement.classList.remove("_error");
-    input.classList.remove("_error");
-}
+//         if (response.ok) {
+//             let result = await response.json();
+//             alert(result.message);
+//             form.reset();
+//             form.classList.remove("_sending");
+//         } else {
+//             form.classList.remove("_sending");
+//             alert(result.message);
+//         }
+//     } else {
+//         alert("Заповніть обов'язкові поля");
+//     }
+// }
+
+// function formValidate(form) {
+//     let error = 0;
+
+//     let formReq = document.querySelectorAll("._req");
+
+//     for (let index = 0; index < formReq.length; index++) {
+//         const input = formReq[index];
+//         formRemoveError(input);
+
+//         if (input.value === "") {
+//             formAddError(input);
+//             error++;
+//         }
+//     }
+//     return error;
+// }
+
+// function formAddError(input) {
+//     input.parentElement.classList.add("_error");
+//     input.classList.add("_error");
+// }
+
+// function formRemoveError(input) {
+//     input.parentElement.classList.remove("_error");
+//     input.classList.remove("_error");
+// }
 
 // Popup
 
