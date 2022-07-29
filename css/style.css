@@ -206,6 +206,7 @@ body.lock {
 
 .main-advantages-grid-item p {
 	font-size: 22px;
+	line-height: 1.4;
 }
 
 .main-advantages-delivery {
@@ -242,7 +243,8 @@ body.lock {
 }
 
 .main-products-grid-item img {
-	width: 150px;
+	/* width: 150px; */
+	max-height: 150px;
 	margin-bottom: 10px;
 }
 
@@ -594,6 +596,7 @@ input._error {
 	border-radius: 30px;
 	position: relative;
 	border: 1px solid #000000;
+	background: url('../images/Background-popup.png') 0 0/cover no-repeat;
 }
 .popup__close {
 	position: absolute;
@@ -640,7 +643,8 @@ input._error {
 }
 
 .swiper-slide__product img {
-	width: 300px;
+	/* width: 300px; */
+	height: 300px;
 }
 
 .swiper-slide img {
@@ -905,6 +909,12 @@ input._error {
 	display: none;
 }
 
+.main-products-grid-item img {
+	/* width: 150px; */
+	max-height: 150px;
+	margin-bottom: 10px;
+}
+
 .main-steps-grid {
 	width: 700px;
 	margin: 0 auto;
@@ -1115,6 +1125,11 @@ input._error {
 	display: none;
 }
 
+.main-products-grid-item img {
+	/* width: 150px; */
+	max-height: 150px;
+	margin-bottom: 10px;
+}
 
 .main-steps-grid {
 	width: 700px;
