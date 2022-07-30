@@ -630,7 +630,7 @@ input._error {
 
 .swiper {
   width: 900px;
-  height: 400px;
+  height: 500px;
 }
 
 
@@ -1073,11 +1073,10 @@ input._error {
 
 .swiper-reviews .swiper-slide__image {
 	height: 100%;
-	padding-top: 50px;
 }
 
 .swiper-reviews img {
-	width: 65%;
+	width: 90%;
 }
 
 }
@@ -1873,11 +1872,11 @@ input._error {
 
 .swiper-reviews .swiper-slide__image {
 	height: 100%;
-	padding-top: 50px;
+	padding-top: 40px;
 }
 
 .swiper-reviews img {
-	width: 65%;
+	width: 90%;
 }
 
 }
