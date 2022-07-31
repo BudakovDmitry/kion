@@ -473,6 +473,11 @@ body.lock {
 	visibility: hidden;
 }
 
+.footer__form._successful {
+	opacity: 0;
+	visibility: hidden;
+}
+
 
 .form-loader {
 	position: absolute;
@@ -488,6 +493,27 @@ body.lock {
 .form-loader._sending {
 	opacity: 1;
 	visibility: visible;
+}
+
+.form-send-ok {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+.form-send-ok._successful {
+	opacity: 1;
+	visibility: visible;
+}
+
+.form-send-ok p {
+	font-weight: bold;
+	font-size: 18px;
 }
 
 
