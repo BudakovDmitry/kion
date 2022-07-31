@@ -1551,6 +1551,18 @@ input._error {
 		width: 100px;
 	}
 
+	.header__contacts p {
+		font-size: 14px;
+	}
+
+	.main-steps-grid-item p {
+		font-size: 14px;
+	}
+
+	.footer-item-contacts p {
+		font-size: 14px;
+	}
+
 	.header__container {
 		padding-top: 5px;
 		padding-bottom: 5px;
