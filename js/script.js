@@ -31,6 +31,7 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 const form = document.getElementById("form");
+const formLoader = document.querySelector(".form-loader");
 form.addEventListener("submit", formSend);
 
 async function formSend(e) {
@@ -42,7 +43,8 @@ async function formSend(e) {
 
     if (error === 0) {
         form.classList.add("_sending");
-        let response = await fetch("../sendmail.php", {
+        formLoader.classList.add("_sending");
+        let response = await fetch("sendmail.php", {
             method: "POST",
             body: formData,
         });
@@ -52,12 +54,12 @@ async function formSend(e) {
             alert(result.message);
             form.reset();
             form.classList.remove("_sending");
+            formLoader.classList.remove("_sending");
         } else {
             form.classList.remove("_sending");
+            formLoader.classList.remove("_sending");
             alert(result.message);
         }
-    } else {
-        alert("Заповніть обов'язкові поля");
     }
 }
 

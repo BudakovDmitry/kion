@@ -1,36 +1,47 @@
 <?php
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Expection;
+  use PHPMailer\PHPMailer\SMTP;
 
   require 'phpmailer/src/Exception.php';
   require 'phpmailer/src/PHPMailer.php';
+  require 'phpmailer/src/SMTP.php';
 
   $mail = new PHPMailer(true);
   $mail->CharSet = 'UTF-8';
   $mail->IsHTML(true);
 
-  $mail->setFrom('budakov.photography@gmail.com', 'Photograph');
 
-  $mail->addAddress('budakovdima7@gmail.com');
+  $mail->isSMTP();
+  $mail->Host = 'smtp.gmail.com';
+  $mail->SMTPAuth = true;
+  $mail->Username = 'budakovdima7@gmail.com';
+  $mail->Password = 'senhowiumhngmbmu';
+  $mail->SMTPSecure = 'ssl';
+  $mail->Port = 465;
+
+  $mail->setFrom('budakovdima7@gmail.com', 'Photograph');
+
+  $mail->addAddress('budakov.it@gmail.com');
 
   $mail->Subject = 'Новое обращение на сайте';
 
-  $body = 'Новое обращение';
+  $body = '<h1>Новое обращение</h1>';
 
   if(trim(!empty($_POST['name']))){
-    $body = '<p><strong>Ім\'я:</strong> '.$_POST['name'].'</p>';
+    $body.='<p><strong>Ім\'я:</strong> '.$_POST['name'].'</p>';
   }
 
   if(trim(!empty($_POST['phone']))){
-    $body = '<p><strong>Номер телефону:</strong> '.$_POST['phone'].'</p>';
+    $body.='<p><strong>Номер телефону:</strong> '.$_POST['phone'].'</p>';
   }
 
   $mail->Body = $body;
 
-  if($mail->send()){
-    $message = 'Данні відправлені!';
-  } else {
+  if (!$mail->send()){
     $message = 'Помилка';
+  } else {
+    $message = 'Данні відправлені!';
   }
 
   $response = ['message' => $message];
