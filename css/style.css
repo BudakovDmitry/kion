@@ -655,6 +655,35 @@ input._error {
 	display: none;
 }
 
+@media screen and (max-width: 1024px) {
+	.about-description {
+		font-size: 26px;
+		width: 700px;
+		text-align: start;
+		line-height: 1.2;
+		margin: 0 auto;
+		margin-right: -10px;
+	}
+
+
+.main-advantages-grid {
+	width: 900px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 40px;
+	grid-row-gap: 60px;
+	margin-bottom: 80px;
+}
+
+.main-advantages-grid-item {
+	margin: 0 auto;
+	text-align: center;
+	width: 250px;
+}
+}
+
 @media screen and (max-width: 992px) {
 	.header__logo img {
 		width: 150px;
