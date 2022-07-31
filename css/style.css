@@ -1310,6 +1310,11 @@ input._error {
 .swiper-reviews img {
 	width: 65%;
 }
+
+.main-questions {
+	height: 100%;
+	background: url('../images/Backgrond-3.png') -40px 30px/100% auto no-repeat;
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -1894,6 +1899,11 @@ input._error {
 .footer-item-contacts p {
 	text-align: center;
 	font-size: 12px;
+}
+
+.main-questions {
+	height: 100%;
+	background: url('../images/Backgrond-3.png') -60px 150px/130% auto no-repeat;
 }
 
 }
