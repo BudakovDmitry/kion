@@ -1891,8 +1891,9 @@ input._error {
 	width: 90%;
 }
 
-.footer-item-contacts {
+.footer-item-contacts p {
 	text-align: center;
+	font-size: 12px;
 }
 
 }
