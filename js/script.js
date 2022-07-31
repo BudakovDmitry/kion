@@ -31,6 +31,8 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 const form = document.getElementById("form");
+const formLoader = document.querySelector(".form-loader");
+const formSuccessfulSend = document.querySelector(".form-send-ok");
 form.addEventListener("submit", formSend);
 
 async function formSend(e) {
@@ -42,23 +44,31 @@ async function formSend(e) {
 
     if (error === 0) {
         form.classList.add("_sending");
-        let response = await fetch("../sendmail.php", {
+        formLoader.classList.add("_sending");
+        let response = await fetch("sendmail.php", {
             method: "POST",
             body: formData,
         });
 
         if (response.ok) {
             let result = await response.json();
-            alert(result.message);
+            formSuccessfulSend.classList.add("_successful");
+            form.classList.add("_successful");
             form.reset();
             form.classList.remove("_sending");
+            formLoader.classList.remove("_sending");
+            setTimeout(successfulSend, 5000);
         } else {
             form.classList.remove("_sending");
+            formLoader.classList.remove("_sending");
             alert(result.message);
         }
-    } else {
-        alert("Заповніть обов'язкові поля");
     }
+}
+
+function successfulSend() {
+    formSuccessfulSend.classList.remove("_successful");
+    form.classList.remove("_successful");
 }
 
 function formValidate(form) {
