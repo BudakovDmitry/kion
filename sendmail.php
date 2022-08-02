@@ -18,7 +18,7 @@
   $mail->Username = 'kionmailer@gmail.com';
   $mail->Password = 'nxtyflmdzacqgebh';
   $mail->SMTPSecure = 'ssl';
-  $mail->Port = 587;
+  $mail->Port = 465;
 
   $mail->setFrom('kionmailer@gmail.com', 'KION');
 
