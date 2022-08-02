@@ -98,6 +98,76 @@ function formRemoveError(input) {
     input.classList.remove("_error");
 }
 
+// Popup form
+
+const popupForm = document.getElementById("popup-form");
+const popupFormLoader = document.querySelector(".popup-form-loader");
+const popupFormSuccessfulSend = document.querySelector(".popup-form-send-ok");
+popupForm.addEventListener("submit", popupFormSend);
+
+async function popupFormSend(e) {
+    e.preventDefault();
+
+    let error = popupFormValidate(popupForm);
+
+    let formData = new FormData(popupForm);
+
+    if (error === 0) {
+        popupForm.classList.add("_sending");
+        popupFormLoader.classList.add("_sending");
+        let response = await fetch("sendmail.php", {
+            method: "POST",
+            body: formData,
+        });
+
+        if (response.ok) {
+            let result = await response.json();
+            popupFormSuccessfulSend.classList.add("_successful");
+            popupForm.classList.add("_successful");
+            popupForm.reset();
+            popupForm.classList.remove("_sending");
+            popupFormLoader.classList.remove("_sending");
+            setTimeout(successfulSend, 5000);
+        } else {
+            popupForm.classList.remove("_sending");
+            popupFormLoader.classList.remove("_sending");
+            alert(result.message);
+        }
+    }
+}
+
+function successfulSend() {
+    popupFormSuccessfulSend.classList.remove("_successful");
+    popupForm.classList.remove("_successful");
+}
+
+function popupFormValidate(popupForm) {
+    let error = 0;
+
+    let formReq = document.querySelectorAll("._req-input");
+
+    for (let index = 0; index < formReq.length; index++) {
+        const input = formReq[index];
+        popupFormRemoveError(input);
+
+        if (input.value === "") {
+            popupFormAddError(input);
+            error++;
+        }
+    }
+    return error;
+}
+
+function popupFormAddError(input) {
+    input.parentElement.classList.add("_error");
+    input.classList.add("_error");
+}
+
+function popupFormRemoveError(input) {
+    input.parentElement.classList.remove("_error");
+    input.classList.remove("_error");
+}
+
 // Popup
 
 const popupLinks = document.querySelectorAll(".popup-link");
