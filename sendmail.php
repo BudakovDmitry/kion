@@ -12,21 +12,21 @@
   $mail->IsHTML(true);
 
 
-  $mail->isSMTP();
-  $mail->Host = 'smtp.gmail.com';
-  $mail->SMTPAuth = true;
-  $mail->Username = 'budakovdima7@gmail.com';
-  $mail->Password = 'senhowiumhngmbmu';
-  $mail->SMTPSecure = 'ssl';
-  $mail->Port = 465;
+  // $mail->isSMTP();
+  // $mail->Host = 'smtp.gmail.com';
+  // $mail->SMTPAuth = true;
+  // $mail->Username = 'budakovdima7@gmail.com';
+  // $mail->Password = 'senhowiumhngmbmu';
+  // $mail->SMTPSecure = 'ssl';
+  // $mail->Port = 465;
 
-  $mail->setFrom('budakovdima7@gmail.com', 'Photograph');
+  $mail->setFrom('budakovdima7@gmail.com', 'KION');
 
   $mail->addAddress('budakov.it@gmail.com');
 
-  $mail->Subject = 'Новое обращение на сайте';
+  $mail->Subject = 'Нове звернення на сайті';
 
-  $body = '<h1>Новое обращение</h1>';
+  $body = '<h1>Нове звернення на сайті</h1>';
 
   if(trim(!empty($_POST['name']))){
     $body.='<p><strong>Ім\'я:</strong> '.$_POST['name'].'</p>';

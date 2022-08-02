@@ -537,13 +537,13 @@
                     <div class="popup__form">
                         <form class="popup__form" id="popup-form" action="#">
                             <input
-                                class="popup__form-input"
+                                class="popup__form-input _req-input"
                                 type="text"
                                 name="name"
                                 placeholder="Ім'я"
                             />
                             <input
-                                class="popup__form-input"
+                                class="popup__form-input _req-input"
                                 name="phone"
                                 type="tel"
                                 placeholder="Номер телефону"
@@ -552,6 +552,13 @@
                                 Відправити
                             </button>
                         </form>
+                        <div class="popup-form-loader">
+                            <img src="./images/Spinner.svg" alt="Loader">
+                        </div>
+                        <div class="popup-form-send-ok">
+                            <img src="./images/send-ok.png" alt="Send Ok">
+                            <p>Заявка відправлена! Дякую!</p>
+                        </div>
                     </div>
                 </div>
             </div>

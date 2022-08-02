@@ -604,7 +604,7 @@ body.lock {
 	background-color: rgba(255, 255, 255, 0.876);
 	top: 0;
 	left: 0;
-	z-index: 100;
+	z-index: -100;
 	opacity: 0;
 	visibility: hidden;
 	transition: all 0.8s ease 0s;
@@ -613,6 +613,7 @@ body.lock {
 .popup.open {
 	opacity: 1;
 	visibility: visible;
+	z-index: 100;
 }
 
 .popup.open .popup__content {
@@ -649,7 +650,21 @@ body.lock {
 }
 .popup__form {
 	text-align: center;
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s ease 0s;
 }
+
+.popup__form._sending {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.popup__form._successful {
+	opacity: 0;
+	visibility: hidden;
+}
+
 .popup__form-input {
 	width: 350px;
 	height: 40px;
@@ -661,8 +676,55 @@ body.lock {
 	padding-left: 20px;
 }
 
+.popup__form-input:focus {
+	box-shadow: 0 0 15px #73b3c0;
+}
+
+.popup__form-input._error {
+	box-shadow: 0 0 15px red;
+	border: 1px solid red;
+}
+
 .popup__form-input:nth-child(2) {
 	margin-bottom: 30px;
+}
+
+.popup-form-loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+
+.popup-form-loader._sending {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup-form-send-ok {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+
+.popup-form-send-ok._successful {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup-form-send-ok p {
+	font-weight: bold;
+	font-size: 18px;
 }
 
 /* Swiper */
