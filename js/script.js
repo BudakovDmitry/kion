@@ -127,7 +127,7 @@ async function popupFormSend(e) {
             popupForm.reset();
             popupForm.classList.remove("_sending");
             popupFormLoader.classList.remove("_sending");
-            setTimeout(successfulSend, 5000);
+            setTimeout(successfulPopupSend, 5000);
         } else {
             popupForm.classList.remove("_sending");
             popupFormLoader.classList.remove("_sending");
@@ -136,7 +136,7 @@ async function popupFormSend(e) {
     }
 }
 
-function successfulSend() {
+function successfulPopupSend() {
     popupFormSuccessfulSend.classList.remove("_successful");
     popupForm.classList.remove("_successful");
 }
