@@ -3,9 +3,9 @@
   use PHPMailer\PHPMailer\Expection;
   use PHPMailer\PHPMailer\SMTP;
 
-  require 'phpmailer/src/Exception.php';
-  require 'phpmailer/src/PHPMailer.php';
-  require 'phpmailer/src/SMTP.php';
+  require 'phpmailer/Exception.php';
+  require 'phpmailer/PHPMailer.php';
+  require 'phpmailer/SMTP.php';
 
   $mail = new PHPMailer(true);
   $mail->CharSet = 'UTF-8';
