@@ -12,15 +12,15 @@
   $mail->IsHTML(true);
 
 
-  // $mail->isSMTP();
-  // $mail->Host = 'smtp.gmail.com';
-  // $mail->SMTPAuth = true;
-  // $mail->Username = 'budakovdima7@gmail.com';
-  // $mail->Password = 'senhowiumhngmbmu';
-  // $mail->SMTPSecure = 'ssl';
-  // $mail->Port = 465;
+  $mail->isSMTP();
+  $mail->Host = 'smtp.gmail.com';
+  $mail->SMTPAuth = true;
+  $mail->Username = 'kionmailer@gmail.com';
+  $mail->Password = 'nxtyflmdzacqgebh';
+  $mail->SMTPSecure = 'ssl';
+  $mail->Port = 587;
 
-  $mail->setFrom('budakovdima7@gmail.com', 'KION');
+  $mail->setFrom('kionmailer@gmail.com', 'KION');
 
   $mail->addAddress('budakov.it@gmail.com');
 
