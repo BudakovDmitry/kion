@@ -13,14 +13,14 @@
 
 
   $mail->isSMTP();
-  $mail->Host = 'smtp.gmail.com';
+  $mail->Host = 'uashared05.twinservers.net';
   $mail->SMTPAuth = true;
-  $mail->Username = 'kionmailer@gmail.com';
-  $mail->Password = 'nxtyflmdzacqgebh';
+  $mail->Username = 'mailer@kion-akzonobel.com';
+  $mail->Password = 'Qwerty112233';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
-  $mail->setFrom('kionmailer@gmail.com', 'KION');
+  $mail->setFrom('mailer@kion-akzonobel.com', 'KION');
 
   $mail->addAddress('budakov.it@gmail.com');
 
