@@ -16,7 +16,7 @@
   $mail->Host = 'uashared05.twinservers.net';
   $mail->SMTPAuth = true;
   $mail->Username = 'mailer@kion-akzonobel.com';
-  $mail->Password = 'Qwerty112233';
+  $mail->Password = '*********';
   $mail->SMTPSecure = 'ssl';
   $mail->Port = 465;
 
