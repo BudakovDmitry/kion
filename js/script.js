@@ -57,7 +57,7 @@ async function formSend(e) {
             form.reset();
             form.classList.remove("_sending");
             formLoader.classList.remove("_sending");
-            setTimeout(successfulSend, 5000);
+            setTimeout(successfulSend, 3000);
         } else {
             form.classList.remove("_sending");
             formLoader.classList.remove("_sending");
@@ -127,7 +127,7 @@ async function popupFormSend(e) {
             popupForm.reset();
             popupForm.classList.remove("_sending");
             popupFormLoader.classList.remove("_sending");
-            setTimeout(successfulPopupSend, 5000);
+            setTimeout(successfulPopupSend, 3000);
         } else {
             popupForm.classList.remove("_sending");
             popupFormLoader.classList.remove("_sending");
@@ -208,11 +208,6 @@ function popupOpen(popup) {
             bodyLock();
         }
         popup.classList.add("open");
-        popup.addEventListener("click", function (e) {
-            if (!e.target.closest(".popup-content")) {
-                popupClose(e.target.closest("popup"));
-            }
-        });
     }
 }
 
